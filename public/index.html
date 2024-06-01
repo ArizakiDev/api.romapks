@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROMAPK API</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>ROMAPK API</h1>
+        <p class="tagline">Intégrez les applications et les roms de Google, Xiaomi et Samsung en toute simplicité.</p>
+    </header>
+    <main>
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>Bienvenue sur ROMAPK API. Notre API vous permet d'accéder aux ROMs et APKs des principaux fabricants de smartphones tels que Xiaomi, Samsung et Google.</p>
+        </section>
+        <section id="usage">
+            <h2>Utilisation</h2>
+            <h3>Endpoints</h3>
+            <ul>
+                <li><code>/xiaomi</code> - Obtenir tous les modèles Xiaomi disponibles</li>
+                <li><code>/xiaomi/rom/:rom/:model</code> - Obtenir une ROM spécifique pour un modèle Xiaomi</li>
+                <li><code>/xiaomi/apk/:apk/:model</code> - Obtenir une APK spécifique pour un modèle Xiaomi</li>
+                <li><code>/samsung</code> - Obtenir tous les modèles Samsung disponibles</li>
+                <li><code>/samsung/rom/:rom/:model</code> - Obtenir une ROM spécifique pour un modèle Samsung</li>
+                <li><code>/samsung/apk/:apk/:model</code> - Obtenir une APK spécifique pour un modèle Samsung</li>
+            </ul>
+        </section>
+        <section id="examples">
+            <h2>Exemples</h2>
+            <p>Voici quelques exemples d'utilisation de notre API:</p>
+            <pre>
+GET /xiaomi
+[
+    "RedmiNote13Pro+",
+    "Mi10",
+    "Mi11"
+]
+
+GET /xiaomi/rom/MIUI14/RedmiNote13Pro+
+{
+    "rom": "MIUI14",
+    "model": "RedmiNote13Pro+",
+    "version": "14.0.1",
+    "downloadLink": "http://example.com/download/rom/miui14/redminote13pro+"
+}
+
+GET /samsung/apk/camera/SamsungA20e
+{
+    "apk": "camera",
+    "model": "SamsungA20e",
+    "version": "3.4.5",
+    "downloadLink": "http://example.com/download/apk/camera/samsunga20e"
+}
+            </pre>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 By Zeyfox & Arizaki.</p>
+    </footer>
+</body>
+</html>
